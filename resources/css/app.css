@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --color-dash-bg: 209 221 237; /* #D1DDED */
+        --color-dashcomponent-bg: 246 250 255; /* #f6faff */
+        --color-dashcomponent-border: 162 187 224; /* #A2BBE0 */
+    }
+
+    html {
+        @apply max-w-[1440px] mx-auto min-h-full;
+    }
+
+    body {
+        @apply flex flex-col min-h-full bg-dash-bg;
+    }
+}
+
+@layer components {
+    .bg-dash-grey {
+        @apply bg-dash-bg;
+    }
+
+    .bg-component-white {
+        @apply bg-dashcomponent-bg;
+    }
+}

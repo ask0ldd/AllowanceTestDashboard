@@ -15,6 +15,11 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'dash-bg': 'rgb(var(--color-dash-bg) / <alpha-value>)',
+                'dashcomponent-bg': 'rgb(var(--color-dashcomponent-bg) / <alpha-value>)',
+                'dashcomponent-border': 'rgb(var(--color-dashcomponent-border) / <alpha-value>)',
+            },
         },
     },
 
