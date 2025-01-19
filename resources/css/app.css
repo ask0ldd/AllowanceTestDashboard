@@ -1,3 +1,5 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap");*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +9,12 @@
         --color-dash-bg: 209 221 237; /* #D1DDED */
         --color-dashcomponent-bg: 246 250 255; /* #f6faff */
         --color-dashcomponent-border: 162 187 224; /* #A2BBE0 */
+        --color-activemenuitem-bg: 47 49 56;
+        --color-offwhite-font: 246 250 255; /* #F6FAFF */
+        --color-offblack-font: 71 75 85; /* #474B55 */
+        --color-tablebutton-bg: 250 252 255; /* #FAFCFF */
+        --color-redtablebutton: 239 84 107; /* #EF546B */
+        --color-blacktablebutton: 239 84 107;
     }
 
     html {
@@ -19,6 +27,10 @@
 }
 
 @layer components {
+    .bg-active-black {
+        @apply bg-activemenuitem-bg;
+    }
+
     .bg-dash-grey {
         @apply bg-dash-bg;
     }
@@ -26,4 +38,45 @@
     .bg-component-white {
         @apply bg-dashcomponent-bg;
     }
+
+    .shadow-component-grey {
+        box-shadow: 0 2px 8px #b0c2decc;
+    }
 }
+
+table {
+    tbody {
+        tr {
+            height: 60px;
+            border-bottom: 1px dashed #b7cce7;
+
+            &:nth-child(even) {
+                background: #eef3fb;
+            }
+
+            &:nth-child(odd) {
+                background: #e3ebf5;
+            }
+        }
+    }
+
+    td,
+    th {
+        height: 100%;
+    }
+
+    thead {
+        tr {
+            background: none;
+            height: 50px;
+            color: #9faec4;
+            th {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+/*.menuItemShadow {
+    box-shadow: 0 4px 8px #5b93ec40, 0 8px 16px #5b93ec40;
+}*/
