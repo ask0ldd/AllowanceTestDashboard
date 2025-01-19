@@ -1,8 +1,19 @@
+import Header from '@/Components/Dashboard/Header/Header';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
 
 export default function Dashboard() {
-    return (
+    return(
+        <div className='bg-dash-grey w-full h-full min-h-full flex flex-col'>
+            <Header/>
+            <main>
+                <div id="allowanceListContainer" className='w-full flex flex-col bg-component-white rounded-3xl overflow-hidden p-[40px] border border-solid border-dashcomponent-border'>
+                    <h1 className=' text-[36px] font-bold'>Active Allowances</h1>
+                </div>
+            </main>
+        </div>
+    )
+    /*return (
         <AuthenticatedLayout
             header={
                 <h2 className="text-xl font-semibold leading-tight text-gray-800">
@@ -22,5 +33,5 @@ export default function Dashboard() {
                 </div>
             </div>
         </AuthenticatedLayout>
-    );
+    );*/
 }
