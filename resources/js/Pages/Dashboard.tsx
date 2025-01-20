@@ -1,18 +1,32 @@
 import Header from '@/Components/Dashboard/Header/Header';
+import Table from '@/Components/Dashboard/Table/Table';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import DashboardLayout from '@/Layouts/DashboardLayout';
 import { Head } from '@inertiajs/react';
 
 export default function Dashboard() {
+
     return(
-        <div className='bg-dash-grey w-full h-full min-h-full flex flex-col'>
+        <DashboardLayout>
+            <div id="allowanceListContainer" className='w-full flex flex-col bg-component-white rounded-3xl overflow-hidden p-[40px] border border-solid border-dashcomponent-border shadow-component-grey'>
+                <h1 className='text-[36px] font-bold font-oswald text-offblack'>ACTIVE ALLOWANCES</h1>
+                <Table/>
+            </div>
+        </DashboardLayout>
+    )
+
+    /*return(
+        <div className='bg-dash-grey w-full h-full min-h-full flex flex-col font-jost'>
+            <Head title="Dashboard" />
             <Header/>
             <main>
-                <div id="allowanceListContainer" className='w-full flex flex-col bg-component-white rounded-3xl overflow-hidden p-[40px] border border-solid border-dashcomponent-border'>
-                    <h1 className=' text-[36px] font-bold'>Active Allowances</h1>
+                <div id="allowanceListContainer" className='w-full flex flex-col bg-component-white rounded-3xl overflow-hidden p-[40px] border border-solid border-dashcomponent-border shadow-component-grey'>
+                    <h1 className='text-[36px] font-bold font-oswald text-offblack'>ACTIVE ALLOWANCES</h1>
+                    <Table/>
                 </div>
             </main>
         </div>
-    )
+    )*/
     /*return (
         <AuthenticatedLayout
             header={
