@@ -47,7 +47,7 @@
 table {
     tbody {
         tr {
-            height: 60px;
+            height: 50px;
             border-bottom: 1px dashed #b7cce7;
 
             &:nth-child(even) {
@@ -68,7 +68,7 @@ table {
     thead {
         tr {
             background: none;
-            height: 50px;
+            height: 40px;
             color: #9faec4;
             th {
                 font-weight: 500;
